@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LSC 1503 | Audio Presentation Plan</title>
+<title>LSC 1503 | Audio Presentation Plan – TED Talk</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -13,7 +13,6 @@
     --warm3: #264653;
     --gold: #e9c46a;
     --sage: #2a9d8f;
-    --light: #fff9f3;
     --card: #ffffff;
     --muted: #7a6652;
     --border: #f0e0cc;
@@ -21,963 +20,654 @@
     --tag-text: #b5560d;
     --check-green: #2a9d8f;
   }
- 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
- 
+  * { margin:0; padding:0; box-sizing:border-box; }
   body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: #2c1f0e;
-    min-height: 100vh;
+    font-family:'DM Sans',sans-serif;
+    background:var(--cream);
+    color:#2c1f0e;
+    min-height:100vh;
     background-image:
-      radial-gradient(ellipse at 10% 10%, rgba(244,162,97,0.18) 0%, transparent 50%),
-      radial-gradient(ellipse at 90% 80%, rgba(42,157,143,0.12) 0%, transparent 50%);
+      radial-gradient(ellipse at 10% 10%,rgba(244,162,97,.18) 0%,transparent 50%),
+      radial-gradient(ellipse at 90% 80%,rgba(42,157,143,.12) 0%,transparent 50%);
   }
  
-  /* ── HEADER ── */
+  /* HEADER */
   header {
-    background: linear-gradient(135deg, #264653 0%, #2a9d8f 100%);
-    color: #fff;
-    padding: 2.5rem 2rem 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    background:linear-gradient(135deg,#264653 0%,#2a9d8f 100%);
+    color:#fff; padding:2.5rem 2rem 2rem; text-align:center; position:relative; overflow:hidden;
   }
   header::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    pointer-events: none;
+    content:''; position:absolute; inset:0;
+    background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events:none;
   }
   .header-tag {
-    display: inline-block;
-    background: rgba(233,196,106,0.25);
-    border: 1px solid rgba(233,196,106,0.5);
-    color: var(--gold);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.9rem;
-    border-radius: 2rem;
-    margin-bottom: 0.9rem;
+    display:inline-block;
+    background:rgba(233,196,106,.25); border:1px solid rgba(233,196,106,.5);
+    color:var(--gold); font-size:.72rem; font-weight:600; letter-spacing:.12em;
+    text-transform:uppercase; padding:.3rem .9rem; border-radius:2rem; margin-bottom:.9rem;
   }
-  header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-  }
-  header p {
-    font-size: 0.95rem;
-    opacity: 0.85;
-    max-width: 540px;
-    margin: 0 auto;
-  }
-  .badge-row {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.4rem;
-    flex-wrap: wrap;
-  }
+  header h1 { font-family:'Playfair Display',serif; font-size:clamp(1.6rem,4vw,2.4rem); margin-bottom:.5rem; line-height:1.2; }
+  header p  { font-size:.95rem; opacity:.85; max-width:560px; margin:0 auto; }
+  .badge-row { display:flex; justify-content:center; gap:1rem; margin-top:1.4rem; flex-wrap:wrap; }
   .hbadge {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: #fff;
-    font-size: 0.78rem;
-    font-weight: 500;
-    padding: 0.3rem 0.9rem;
-    border-radius: 2rem;
-    display: flex; align-items: center; gap: 0.4rem;
+    background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2);
+    color:#fff; font-size:.78rem; font-weight:500; padding:.3rem .9rem; border-radius:2rem;
+    display:flex; align-items:center; gap:.4rem;
   }
-  .hbadge span { font-size: 0.95rem; }
  
-  /* ── TABS ── */
+  /* TABS */
   .tabs-wrapper {
-    background: var(--card);
-    border-bottom: 2px solid var(--border);
-    position: sticky; top: 0; z-index: 100;
-    box-shadow: 0 2px 12px rgba(38,70,83,0.06);
+    background:var(--card); border-bottom:2px solid var(--border);
+    position:sticky; top:0; z-index:100; box-shadow:0 2px 12px rgba(38,70,83,.06);
   }
-  .tabs {
-    display: flex;
-    max-width: 900px;
-    margin: 0 auto;
-    overflow-x: auto;
-    scrollbar-width: none;
-    padding: 0 1rem;
-  }
-  .tabs::-webkit-scrollbar { display: none; }
+  .tabs { display:flex; max-width:900px; margin:0 auto; overflow-x:auto; scrollbar-width:none; padding:0 1rem; }
+  .tabs::-webkit-scrollbar { display:none; }
   .tab-btn {
-    flex-shrink: 0;
-    background: none;
-    border: none;
-    padding: 1rem 1.2rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.84rem;
-    font-weight: 500;
-    color: var(--muted);
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    transition: all 0.2s;
-    display: flex; align-items: center; gap: 0.4rem;
-    white-space: nowrap;
+    flex-shrink:0; background:none; border:none; padding:1rem 1.1rem;
+    font-family:'DM Sans',sans-serif; font-size:.84rem; font-weight:500; color:var(--muted);
+    cursor:pointer; border-bottom:3px solid transparent; transition:all .2s; white-space:nowrap;
   }
-  .tab-btn:hover { color: var(--warm2); }
-  .tab-btn.active {
-    color: var(--warm2);
-    border-bottom-color: var(--warm2);
-    font-weight: 600;
-  }
-  .tab-icon { font-size: 1rem; }
+  .tab-btn:hover { color:var(--warm2); }
+  .tab-btn.active { color:var(--warm2); border-bottom-color:var(--warm2); font-weight:600; }
  
-  /* ── MAIN ── */
-  main { max-width: 900px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+  /* MAIN */
+  main { max-width:900px; margin:0 auto; padding:2rem 1.25rem 4rem; }
+  .tab-panel { display:none; }
+  .tab-panel.active { display:block; animation:fadeIn .3s ease; }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
  
-  .tab-panel { display: none; }
-  .tab-panel.active { display: block; animation: fadeIn 0.3s ease; }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  /* SECTION HEAD */
+  .section-head { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.5rem; }
+  .section-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; flex-shrink:0; }
+  .icon-coral{background:#fff0eb} .icon-gold{background:#fff8e1} .icon-sage{background:#e8f8f7} .icon-blue{background:#e8f1f8} .icon-plum{background:#f3eefb}
+  .section-head-text h2 { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--warm3); margin-bottom:.3rem; }
+  .section-head-text p  { font-size:.9rem; color:var(--muted); line-height:1.5; }
  
-  /* ── SECTION HEADER ── */
-  .section-head {
-    display: flex; align-items: flex-start; gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  .section-icon {
-    width: 52px; height: 52px; border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem; flex-shrink: 0;
-  }
-  .icon-coral { background: #fff0eb; }
-  .icon-gold  { background: #fff8e1; }
-  .icon-sage  { background: #e8f8f7; }
-  .icon-blue  { background: #e8f1f8; }
-  .icon-plum  { background: #f3eefb; }
+  /* CARD */
+  .card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:1.5rem; margin-bottom:1.25rem; box-shadow:0 2px 10px rgba(38,70,83,.04); }
+  .card-title { font-weight:600; font-size:.95rem; margin-bottom:1rem; display:flex; align-items:center; gap:.5rem; color:var(--warm3); }
+  .card-title .dot { width:8px; height:8px; border-radius:50%; background:var(--warm1); flex-shrink:0; }
  
-  .section-head-text h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--warm3);
-    margin-bottom: 0.3rem;
-  }
-  .section-head-text p { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
- 
-  /* ── CARD ── */
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 1.5rem;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 2px 10px rgba(38,70,83,0.04);
-  }
-  .card-title {
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-    display: flex; align-items: center; gap: 0.5rem;
-    color: var(--warm3);
-  }
-  .card-title .dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--warm1); flex-shrink: 0;
+  /* TOPIC PILLS */
+  .topic-examples { display:flex; flex-wrap:wrap; gap:.5rem; margin:.8rem 0 1rem; }
+  .topic-pill {
+    background:linear-gradient(135deg,#fff0eb,#fff8e1);
+    border:1px solid #f4c09a; color:var(--warm2);
+    font-size:.8rem; font-weight:600; padding:.35rem .85rem; border-radius:2rem;
   }
  
-  /* ── OVERVIEW PAGE ── */
-  .overview-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.1rem;
-    margin-bottom: 1.5rem;
-  }
-  .ov-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 1.25rem;
-    display: flex; gap: 0.9rem; align-items: flex-start;
-  }
-  .ov-num {
-    width: 34px; height: 34px; border-radius: 10px;
-    background: linear-gradient(135deg, var(--warm1), var(--warm2));
-    color: #fff; font-weight: 700; font-size: 0.9rem;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .ov-text h3 { font-size: 0.92rem; font-weight: 600; margin-bottom: 0.25rem; color: var(--warm3); }
-  .ov-text p  { font-size: 0.82rem; color: var(--muted); line-height: 1.45; }
+  /* OVERVIEW GRID */
+  .overview-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.1rem; margin-bottom:1.5rem; }
+  .ov-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:1.25rem; display:flex; gap:.9rem; align-items:flex-start; }
+  .ov-num { width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg,var(--warm1),var(--warm2)); color:#fff; font-weight:700; font-size:.9rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .ov-text h3 { font-size:.92rem; font-weight:600; margin-bottom:.25rem; color:var(--warm3); }
+  .ov-text p  { font-size:.82rem; color:var(--muted); line-height:1.45; }
  
-  .alert-box {
-    background: linear-gradient(135deg, #fff8e6, #fff3d6);
-    border: 1px solid #f4c742;
-    border-radius: 14px;
-    padding: 1.2rem 1.4rem;
-    display: flex; gap: 0.9rem;
-    margin-bottom: 1.25rem;
-  }
-  .alert-box .icon { font-size: 1.4rem; flex-shrink: 0; }
-  .alert-box h4 { font-size: 0.92rem; font-weight: 600; color: #7a5c00; margin-bottom: 0.2rem; }
-  .alert-box p  { font-size: 0.83rem; color: #8a6800; line-height: 1.45; }
+  /* ALERT / TIP */
+  .alert-box { background:linear-gradient(135deg,#fff8e6,#fff3d6); border:1px solid #f4c742; border-radius:14px; padding:1.2rem 1.4rem; display:flex; gap:.9rem; margin-bottom:1.25rem; }
+  .alert-box .icon { font-size:1.4rem; flex-shrink:0; }
+  .alert-box h4 { font-size:.92rem; font-weight:600; color:#7a5c00; margin-bottom:.2rem; }
+  .alert-box p  { font-size:.83rem; color:#8a6800; line-height:1.45; }
+  .tip-box { background:linear-gradient(135deg,#e8f8f7,#d4f3f0); border:1px solid rgba(42,157,143,.25); border-radius:14px; padding:1.2rem 1.4rem; display:flex; gap:.9rem; margin-bottom:1.25rem; }
+  .tip-box .icon { font-size:1.3rem; flex-shrink:0; }
+  .tip-box h4 { font-size:.92rem; font-weight:600; color:#1a6b62; margin-bottom:.2rem; }
+  .tip-box p  { font-size:.83rem; color:#1d7a70; line-height:1.45; }
  
-  .tip-box {
-    background: linear-gradient(135deg, #e8f8f7, #d4f3f0);
-    border: 1px solid #2a9d8f40;
-    border-radius: 14px;
-    padding: 1.2rem 1.4rem;
-    display: flex; gap: 0.9rem;
-    margin-bottom: 1.25rem;
-  }
-  .tip-box .icon { font-size: 1.3rem; flex-shrink: 0; }
-  .tip-box h4   { font-size: 0.92rem; font-weight: 600; color: #1a6b62; margin-bottom: 0.2rem; }
-  .tip-box p    { font-size: 0.83rem; color: #1d7a70; line-height: 1.45; }
+  /* SCRIPT BLOCKS */
+  .script-block { background:var(--card); border:1px solid var(--border); border-radius:16px; margin-bottom:1.25rem; overflow:hidden; }
+  .script-label { background:linear-gradient(135deg,var(--warm3),#1a3a45); color:#fff; padding:.7rem 1.2rem; font-size:.8rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; display:flex; align-items:center; gap:.5rem; }
+  .script-label .num { background:rgba(255,255,255,.2); width:22px; height:22px; border-radius:50%; font-size:.75rem; display:flex; align-items:center; justify-content:center; }
+  .script-body { padding:1.25rem; }
+  .script-purpose { font-size:.8rem; color:var(--muted); margin-bottom:.8rem; font-style:italic; }
+  .example-phrase { background:#fdf6ee; border-left:3px solid var(--warm1); padding:.75rem 1rem; margin-bottom:.6rem; border-radius:0 8px 8px 0; font-size:.88rem; line-height:1.6; color:#3a2510; }
+  .example-phrase strong { color:var(--warm2); }
+  .phrase-note { font-size:.78rem; color:var(--muted); margin-top:.4rem; padding-left:.5rem; }
+  .starter-chips { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.8rem; }
+  .chip { background:var(--tag-bg); color:var(--tag-text); border:1px solid #f4c09a; border-radius:2rem; padding:.3rem .75rem; font-size:.78rem; font-weight:500; }
  
-  /* ── SCRIPT BUILDER ── */
-  .script-block {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    margin-bottom: 1.25rem;
-    overflow: hidden;
-  }
-  .script-label {
-    background: linear-gradient(135deg, var(--warm3), #1a3a45);
-    color: #fff;
-    padding: 0.7rem 1.2rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    display: flex; align-items: center; gap: 0.5rem;
-  }
-  .script-label .num {
-    background: rgba(255,255,255,0.2);
-    width: 22px; height: 22px; border-radius: 50%;
-    font-size: 0.75rem; display: flex; align-items: center; justify-content: center;
-  }
-  .script-body { padding: 1.25rem; }
-  .script-purpose {
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin-bottom: 0.8rem;
-    font-style: italic;
-  }
-  .example-phrase {
-    background: #fdf6ee;
-    border-left: 3px solid var(--warm1);
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.6rem;
-    border-radius: 0 8px 8px 0;
-    font-size: 0.88rem;
-    line-height: 1.55;
-    color: #3a2510;
-  }
-  .example-phrase strong { color: var(--warm2); }
-  .phrase-note {
-    font-size: 0.78rem;
-    color: var(--muted);
-    margin-top: 0.4rem;
-    padding-left: 0.5rem;
-  }
-  .starter-chips {
-    display: flex; flex-wrap: wrap; gap: 0.5rem;
-    margin-top: 0.8rem;
-  }
-  .chip {
-    background: var(--tag-bg);
-    color: var(--tag-text);
-    border: 1px solid #f4c09a;
-    border-radius: 2rem;
-    padding: 0.3rem 0.75rem;
-    font-size: 0.78rem;
-    font-weight: 500;
-  }
+  /* QUESTIONS */
+  .q-accordion { margin-bottom:.8rem; }
+  .q-header { width:100%; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:.9rem 1.1rem; display:flex; align-items:center; gap:.8rem; cursor:pointer; transition:all .2s; text-align:left; }
+  .q-header:hover { border-color:var(--warm1); background:#fff9f4; }
+  .q-header.open  { border-radius:12px 12px 0 0; border-bottom:none; border-color:var(--warm1); }
+  .q-num { width:30px; height:30px; border-radius:8px; background:linear-gradient(135deg,var(--warm1),var(--warm2)); color:#fff; font-size:.8rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .q-text { flex:1; font-size:.88rem; font-weight:500; color:var(--warm3); }
+  .q-arrow { font-size:.8rem; color:var(--muted); transition:transform .2s; }
+  .q-header.open .q-arrow { transform:rotate(180deg); }
+  .q-body { display:none; background:#fff9f4; border:1px solid var(--warm1); border-top:none; border-radius:0 0 12px 12px; padding:1rem 1.2rem; }
+  .q-body.open { display:block; animation:fadeIn .2s ease; }
+  .answer-tip { font-size:.83rem; color:var(--muted); margin-bottom:.6rem; font-style:italic; }
+  .sample-answer { background:#fff; border-left:3px solid var(--sage); padding:.7rem 1rem; border-radius:0 8px 8px 0; font-size:.86rem; line-height:1.55; color:#2c3e38; }
  
-  /* ── QUESTIONS ── */
-  .q-accordion { margin-bottom: 0.8rem; }
-  .q-header {
-    width: 100%;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 0.9rem 1.1rem;
-    display: flex; align-items: center; gap: 0.8rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-align: left;
-  }
-  .q-header:hover { border-color: var(--warm1); background: #fff9f4; }
-  .q-header.open  { border-radius: 12px 12px 0 0; border-bottom: none; border-color: var(--warm1); }
-  .q-num {
-    width: 30px; height: 30px; border-radius: 8px;
-    background: linear-gradient(135deg, var(--warm1), var(--warm2));
-    color: #fff; font-size: 0.8rem; font-weight: 700;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .q-text { flex: 1; font-size: 0.88rem; font-weight: 500; color: var(--warm3); }
-  .q-arrow { font-size: 0.8rem; color: var(--muted); transition: transform 0.2s; }
-  .q-header.open .q-arrow { transform: rotate(180deg); }
-  .q-body {
-    display: none;
-    background: #fff9f4;
-    border: 1px solid var(--warm1);
-    border-top: none;
-    border-radius: 0 0 12px 12px;
-    padding: 1rem 1.2rem;
-  }
-  .q-body.open { display: block; animation: fadeIn 0.2s ease; }
-  .answer-tip {
-    font-size: 0.83rem;
-    color: var(--muted);
-    margin-bottom: 0.6rem;
-    font-style: italic;
-  }
-  .sample-answer {
-    background: #fff;
-    border-left: 3px solid var(--sage);
-    padding: 0.7rem 1rem;
-    border-radius: 0 8px 8px 0;
-    font-size: 0.86rem;
-    line-height: 1.55;
-    color: #2c3e38;
-  }
+  /* CHECKLIST */
+  .checklist-item { display:flex; align-items:flex-start; gap:.9rem; background:var(--card); border:1.5px solid var(--border); border-radius:12px; padding:1rem 1.1rem; margin-bottom:.7rem; cursor:pointer; transition:all .2s; }
+  .checklist-item:hover { border-color:var(--warm1); }
+  .checklist-item.checked { border-color:var(--check-green); background:#f0faf9; }
+  .cb-box { width:22px; height:22px; border-radius:6px; border:2px solid #c0b0a0; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:.85rem; transition:all .2s; margin-top:1px; }
+  .checklist-item.checked .cb-box { background:var(--check-green); border-color:var(--check-green); color:#fff; }
+  .cb-content h4 { font-size:.9rem; font-weight:600; margin-bottom:.15rem; color:var(--warm3); }
+  .cb-content p  { font-size:.8rem; color:var(--muted); line-height:1.4; }
+  .checklist-item.checked .cb-content h4 { color:var(--check-green); }
+  .progress-row { display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem; }
+  .progress-bar-wrap { flex:1; background:var(--border); border-radius:2rem; height:10px; overflow:hidden; }
+  .progress-bar-fill { height:100%; background:linear-gradient(90deg,var(--warm1),var(--sage)); border-radius:2rem; transition:width .4s ease; width:0%; }
+  .progress-label { font-size:.82rem; font-weight:600; color:var(--warm2); min-width:36px; text-align:right; }
+  .ready-msg { text-align:center; padding:1.5rem; border:2px dashed var(--check-green); border-radius:14px; margin-top:1.2rem; display:none; }
+  .ready-msg.show { display:block; animation:fadeIn .4s ease; }
+  .ready-msg h3 { font-family:'Playfair Display',serif; color:var(--check-green); font-size:1.3rem; margin-bottom:.4rem; }
+  .ready-msg p  { color:var(--muted); font-size:.85rem; }
  
-  /* ── CHECKLIST ── */
-  .checklist-item {
-    display: flex; align-items: flex-start; gap: 0.9rem;
-    background: var(--card);
-    border: 1.5px solid var(--border);
-    border-radius: 12px;
-    padding: 1rem 1.1rem;
-    margin-bottom: 0.7rem;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .checklist-item:hover { border-color: var(--warm1); }
-  .checklist-item.checked { border-color: var(--check-green); background: #f0faf9; }
-  .cb-box {
-    width: 22px; height: 22px; border-radius: 6px;
-    border: 2px solid #c0b0a0;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0; font-size: 0.85rem; transition: all 0.2s;
-    margin-top: 1px;
-  }
-  .checklist-item.checked .cb-box {
-    background: var(--check-green);
-    border-color: var(--check-green);
-    color: #fff;
-  }
-  .cb-content h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.15rem; color: var(--warm3); }
-  .cb-content p  { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
-  .checklist-item.checked .cb-content h4 { color: var(--check-green); }
+  /* STEPS */
+  .step-row { display:flex; gap:1rem; align-items:flex-start; margin-bottom:1rem; }
+  .step-circle { width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--warm1),var(--warm2)); color:#fff; font-weight:700; font-size:.9rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .step-text h4 { font-size:.9rem; font-weight:600; margin-bottom:.2rem; color:var(--warm3); }
+  .step-text p  { font-size:.83rem; color:var(--muted); line-height:1.45; }
  
-  .progress-row {
-    display: flex; align-items: center; gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  .progress-bar-wrap {
-    flex: 1; background: var(--border); border-radius: 2rem; height: 10px; overflow: hidden;
-  }
-  .progress-bar-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--warm1), var(--sage));
-    border-radius: 2rem;
-    transition: width 0.4s ease;
-    width: 0%;
-  }
-  .progress-label { font-size: 0.82rem; font-weight: 600; color: var(--warm2); min-width: 36px; text-align: right; }
-  .ready-msg {
-    text-align: center;
-    padding: 1.5rem;
-    border: 2px dashed var(--check-green);
-    border-radius: 14px;
-    margin-top: 1.2rem;
-    display: none;
-  }
-  .ready-msg.show { display: block; animation: fadeIn 0.4s ease; }
-  .ready-msg h3 { font-family: 'Playfair Display', serif; color: var(--check-green); font-size: 1.3rem; margin-bottom: 0.4rem; }
-  .ready-msg p  { color: var(--muted); font-size: 0.85rem; }
+  /* RUBRIC */
+  .rubric-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem; }
+  @media(max-width:480px){.rubric-row{grid-template-columns:1fr}}
+  .rubric-card { border-radius:12px; padding:1.1rem; border:1px solid transparent; }
+  .rubric-card.coral{background:#fff4ef;border-color:#f4b49a} .rubric-card.gold{background:#fffbf0;border-color:#f4d98a}
+  .rubric-card h4 { font-size:.88rem; font-weight:700; margin-bottom:.25rem; }
+  .rubric-card .pct { font-size:1.4rem; font-weight:700; font-family:'Playfair Display',serif; margin-bottom:.3rem; }
+  .rubric-card p  { font-size:.79rem; color:var(--muted); line-height:1.4; }
+  .rubric-card.coral h4,.rubric-card.coral .pct{color:var(--warm2)} .rubric-card.gold h4,.rubric-card.gold .pct{color:#b5860d}
  
-  /* ── TEAMS GUIDE ── */
-  .step-row {
-    display: flex; gap: 1rem; align-items: flex-start;
-    margin-bottom: 1rem;
-  }
-  .step-circle {
-    width: 36px; height: 36px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--warm1), var(--warm2));
-    color: #fff; font-weight: 700; font-size: 0.9rem;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .step-text h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.2rem; color: var(--warm3); }
-  .step-text p  { font-size: 0.83rem; color: var(--muted); line-height: 1.45; }
- 
-  /* ── RUBRIC BOX ── */
-  .rubric-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  @media (max-width: 480px) { .rubric-row { grid-template-columns: 1fr; } }
-  .rubric-card {
-    border-radius: 12px;
-    padding: 1.1rem;
-    border: 1px solid transparent;
-  }
-  .rubric-card.coral { background: #fff4ef; border-color: #f4b49a; }
-  .rubric-card.gold  { background: #fffbf0; border-color: #f4d98a; }
-  .rubric-card h4 { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.25rem; }
-  .rubric-card .pct { font-size: 1.4rem; font-weight: 700; font-family: 'Playfair Display', serif; margin-bottom: 0.3rem; }
-  .rubric-card p  { font-size: 0.79rem; color: var(--muted); line-height: 1.4; }
-  .rubric-card.coral h4, .rubric-card.coral .pct { color: var(--warm2); }
-  .rubric-card.gold h4,  .rubric-card.gold .pct  { color: #b5860d; }
- 
-  /* ── FOOTER ── */
-  footer {
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.78rem;
-    color: var(--muted);
-    border-top: 1px solid var(--border);
-    margin-top: 2rem;
-  }
- 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 600px) {
-    main { padding: 1.5rem 1rem 3rem; }
-    .tab-btn { padding: 0.8rem 0.9rem; font-size: 0.78rem; }
-  }
+  footer { text-align:center; padding:1.5rem; font-size:.78rem; color:var(--muted); border-top:1px solid var(--border); margin-top:2rem; }
+  @media(max-width:600px){ main{padding:1.5rem 1rem 3rem} .tab-btn{padding:.8rem .85rem;font-size:.78rem} }
 </style>
 </head>
 <body>
  
-<!-- HEADER -->
 <header>
   <div class="header-tag">LSC 1503 · Professional Spoken Communication</div>
   <h1>🎙️ Audio Presentation Plan</h1>
-  <p>Prepare a short audio overview of your TED-style career presentation before your final exam</p>
+  <p>Record a short audio overview of your TED Talk plan — your big idea, your story, and your slides — before your final exam</p>
   <div class="badge-row">
     <div class="hbadge"><span>⏱️</span> 3–5 minutes</div>
     <div class="hbadge"><span>🎤</span> Teams Assignment</div>
     <div class="hbadge"><span>⭐</span> 5% of Grade</div>
-    <div class="hbadge"><span>📅</span> Plan Stage</div>
+    <div class="hbadge"><span>💡</span> TED Talk — Plan Stage</div>
   </div>
 </header>
  
-<!-- TABS -->
 <div class="tabs-wrapper">
   <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab('overview')">
-      <span class="tab-icon">🏠</span> Overview
-    </button>
-    <button class="tab-btn" onclick="switchTab('script')">
-      <span class="tab-icon">📝</span> Your Script Guide
-    </button>
-    <button class="tab-btn" onclick="switchTab('questions')">
-      <span class="tab-icon">🎯</span> Defence Questions
-    </button>
-    <button class="tab-btn" onclick="switchTab('checklist')">
-      <span class="tab-icon">✅</span> Ready Checklist
-    </button>
-    <button class="tab-btn" onclick="switchTab('teams')">
-      <span class="tab-icon">📱</span> How to Submit
-    </button>
+    <button class="tab-btn active" onclick="switchTab('overview',this)">🏠 Overview</button>
+    <button class="tab-btn" onclick="switchTab('script',this)">📝 Script Guide</button>
+    <button class="tab-btn" onclick="switchTab('questions',this)">🎯 Defence Questions</button>
+    <button class="tab-btn" onclick="switchTab('checklist',this)">✅ Ready Checklist</button>
+    <button class="tab-btn" onclick="switchTab('teams',this)">📱 How to Submit</button>
   </div>
 </div>
  
 <main>
  
-  <!-- ══════════════════════════════════════════════
-       TAB 1 · OVERVIEW
-  ══════════════════════════════════════════════ -->
-  <div class="tab-panel active" id="tab-overview">
+<!-- ══════════ OVERVIEW ══════════ -->
+<div class="tab-panel active" id="tab-overview">
  
-    <div class="section-head">
-      <div class="section-icon icon-coral">🎙️</div>
-      <div class="section-head-text">
-        <h2>What is this activity?</h2>
-        <p>Before your final presentation, you will record a short audio overview of your plan on Microsoft Teams. This is NOT your full presentation — it is a planning summary that shows your teacher you are prepared.</p>
+  <div class="section-head">
+    <div class="section-icon icon-coral">🎙️</div>
+    <div class="section-head-text">
+      <h2>What is this activity?</h2>
+      <p>Before your final TED Talk presentation, you will record a short audio overview of your plan on Microsoft Teams. This is <strong>not</strong> your full presentation — it is a planning summary that shows your teacher you are organised, prepared, and thinking deeply about your talk.</p>
+    </div>
+  </div>
+ 
+  <div class="card">
+    <div class="card-title"><div class="dot"></div> What kind of topic is a TED Talk topic?</div>
+    <p style="font-size:.85rem;color:var(--muted);margin-bottom:.7rem;">Your TED Talk is about a <strong>big idea</strong> — something you believe, something that changed how you think, or something that could change how others see the world. It is personal, human, and idea-driven. It is <em>not</em> a career report or a school essay. For example:</p>
+    <div class="topic-examples">
+      <div class="topic-pill">💛 Kindness is contagious</div>
+      <div class="topic-pill">😴 Why sleep changes everything</div>
+      <div class="topic-pill">❌ The power of saying no</div>
+      <div class="topic-pill">🌱 How failure helps us grow</div>
+      <div class="topic-pill">📵 What I learned from quitting social media</div>
+      <div class="topic-pill">🤝 Listening is a superpower</div>
+      <div class="topic-pill">🧠 The lies we tell ourselves</div>
+      <div class="topic-pill">⏳ Stop waiting for the right moment</div>
+    </div>
+    <p style="font-size:.82rem;color:var(--muted);">Your topic should be <em>one clear idea</em> that your audience can feel something about, think differently about, and remember long after your talk ends.</p>
+  </div>
+ 
+  <div class="alert-box">
+    <div class="icon">💡</div>
+    <div>
+      <h4>This is a PLAN, not a performance</h4>
+      <p>You do not need to deliver your full talk in this recording. Just explain your thinking — what your big idea is, how you plan to open, what personal story you will tell, how your argument is built, and what your slides look like. Think of it as telling a friend: "This is what my TED Talk is going to be about and why."</p>
+    </div>
+  </div>
+ 
+  <div class="section-head" style="margin-top:1.5rem">
+    <div class="section-icon icon-gold">📋</div>
+    <div class="section-head-text">
+      <h2>What to cover in your audio</h2>
+      <p>Your 3–5 minute recording should touch on all five parts below.</p>
+    </div>
+  </div>
+ 
+  <div class="overview-grid">
+    <div class="ov-card">
+      <div class="ov-num">1</div>
+      <div class="ov-text">
+        <h3>💡 Your Big Idea</h3>
+        <p>State your TED Talk topic and its core message. What do you want your audience to think, feel, or do differently after hearing you?</p>
       </div>
     </div>
+    <div class="ov-card">
+      <div class="ov-num">2</div>
+      <div class="ov-text">
+        <h3>🪝 Your Hook</h3>
+        <p>How will you open your talk in the first 30 seconds? A question, a surprising fact, a bold statement, or a vivid moment from your own life?</p>
+      </div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-num">3</div>
+      <div class="ov-text">
+        <h3>📖 Your Personal Story</h3>
+        <p>What real experience connects you to this idea? The best TED Talks are anchored in honest, human moments — not just facts and opinions.</p>
+      </div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-num">4</div>
+      <div class="ov-text">
+        <h3>📌 Your Supporting Points</h3>
+        <p>What 2–3 ideas, examples, or pieces of evidence will you use to convince your audience that your big idea is true and important?</p>
+      </div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-num">5</div>
+      <div class="ov-text">
+        <h3>🎨 Your Slide Design</h3>
+        <p>Describe your PowerPoint choices — colours, images, fonts, layout — and explain WHY those choices suit the tone and mood of your topic.</p>
+      </div>
+    </div>
+  </div>
  
-    <div class="alert-box">
-      <div class="icon">💡</div>
+  <div class="tip-box">
+    <div class="icon">🌟</div>
+    <div>
+      <h4>Why does this matter?</h4>
+      <p>This recording counts as 5% of your overall grade. More importantly, saying your plan out loud before the final exam helps you discover gaps and strengthen your argument while there is still time to improve. Your teacher can also give you personalised feedback based on this recording.</p>
+    </div>
+  </div>
+ 
+  <div class="card">
+    <div class="card-title"><div class="dot"></div> Grade Breakdown Reminder</div>
+    <div class="rubric-row">
+      <div class="rubric-card coral">
+        <div class="pct">40%</div>
+        <h4>Final Presentation</h4>
+        <p>Full delivery of your TED Talk on exam day — content, structure, delivery, and slides</p>
+      </div>
+      <div class="rubric-card gold">
+        <div class="pct">10%</div>
+        <h4>Oral Defence</h4>
+        <p>Answering your teacher's questions about your process and choices after your talk</p>
+      </div>
+    </div>
+    <div class="tip-box" style="margin-bottom:0">
+      <div class="icon">🎯</div>
       <div>
-        <h4>This is a PLAN, not a performance</h4>
-        <p>You do not need to present your whole topic. Just explain your ideas — what you plan to say, how your slides will look, and why you made your choices. Think of it like telling a friend what your presentation is about.</p>
+        <h4>This audio recording = 5% (preparation stage)</h4>
+        <p>See the Defence Questions tab to practise the 10 questions your teacher may ask on exam day. Strong answers there will protect your 10% oral defence grade.</p>
       </div>
     </div>
+  </div>
  
-    <div class="section-head" style="margin-top:1.5rem">
-      <div class="section-icon icon-gold">📋</div>
-      <div class="section-head-text">
-        <h2>What to cover in your audio</h2>
-        <p>Your 3–5 minute recording should briefly touch on all five parts below.</p>
+</div>
+ 
+<!-- ══════════ SCRIPT GUIDE ══════════ -->
+<div class="tab-panel" id="tab-script">
+ 
+  <div class="section-head">
+    <div class="section-icon icon-coral">📝</div>
+    <div class="section-head-text">
+      <h2>Your Audio Script Guide</h2>
+      <p>Use these examples and sentence starters as a guide — you do NOT need to copy them. Speak naturally from your own notes. All examples below use the idea <em>"Kindness is contagious"</em> so you can see how the structure works in practice.</p>
+    </div>
+  </div>
+ 
+  <div class="alert-box">
+    <div class="icon">⏱️</div>
+    <div>
+      <h4>Target: 3–5 minutes total</h4>
+      <p>Spend roughly 30–60 seconds on each section. Do not read from a written script — it will sound flat and unnatural. Use bullet-point notes and speak from what you genuinely know and feel about your topic.</p>
+    </div>
+  </div>
+ 
+  <div class="script-block">
+    <div class="script-label"><div class="num">1</div> Opening — Your name, topic, and core message</div>
+    <div class="script-body">
+      <div class="script-purpose">Begin by greeting your teacher, naming your TED Talk, and stating your core message in one clear sentence.</div>
+      <div class="example-phrase">
+        <strong>"Hi, my name is [name], and I am in LSC 1503. My TED Talk is called <em>Kindness is Contagious</em>. My core message is simple: one small act of kindness can spread further than you ever expect — and understanding that can genuinely change the way you move through the world."</strong>
+        <div class="phrase-note">💬 Two things your listener needs right away: your topic title and your one-sentence message — what you want the audience to leave believing.</div>
+      </div>
+      <div class="example-phrase">
+        "In this recording I will walk you through my plan — my hook, my personal story, my key supporting points, and my slide design."
+        <div class="phrase-note">💬 A short roadmap at the start helps your listener follow your plan easily.</div>
+      </div>
+      <div class="starter-chips">
+        <div class="chip">My TED Talk is called…</div>
+        <div class="chip">My big idea is…</div>
+        <div class="chip">My core message is…</div>
+        <div class="chip">I want my audience to believe that…</div>
       </div>
     </div>
+  </div>
  
-    <div class="overview-grid">
-      <div class="ov-card">
-        <div class="ov-num">1</div>
-        <div class="ov-text">
-          <h3>🪝 Your Hook</h3>
-          <p>Tell your teacher how you plan to open your presentation. What will you say or do in the first 30 seconds to grab attention?</p>
-        </div>
+  <div class="script-block">
+    <div class="script-label"><div class="num">2</div> Part 1 — My Hook 🪝</div>
+    <div class="script-body">
+      <div class="script-purpose">Describe how you plan to open your TED Talk in the first 30 seconds. Name the hook type you are using and explain WHY it suits your idea.</div>
+      <div class="example-phrase">
+        <strong>"To open my talk, I am going to ask the audience a question: 'When was the last time a stranger was kind to you — and how did it make you feel for the rest of that day?' I chose a question hook because it immediately makes the audience look inward and connect the topic to their own lived experience, before I have even made a single argument."</strong>
+        <div class="phrase-note">💬 Hook types: a rhetorical question, a surprising statistic, a bold statement, a vivid personal moment, or a quote. Always say WHY this hook fits your particular idea.</div>
       </div>
-      <div class="ov-card">
-        <div class="ov-num">2</div>
-        <div class="ov-text">
-          <h3>📖 Your Story</h3>
-          <p>What personal story connects you to this career topic? Why does it matter to you?</p>
-        </div>
+      <div class="example-phrase">
+        "I considered opening with a statistic — that witnessing an act of kindness releases oxytocin in the observer, not just the receiver — but I decided the question felt more personal and less like a lecture."
+        <div class="phrase-note">💬 Explaining a choice you decided AGAINST shows genuine critical thinking.</div>
       </div>
-      <div class="ov-card">
-        <div class="ov-num">3</div>
-        <div class="ov-text">
-          <h3>📌 Your Main Points</h3>
-          <p>Briefly mention your 2–3 key points. What information will you share about your chosen career?</p>
-        </div>
-      </div>
-      <div class="ov-card">
-        <div class="ov-num">4</div>
-        <div class="ov-text">
-          <h3>🎨 Your PowerPoint Design</h3>
-          <p>Explain your slide design choices — the colours, layout, font, and images — and where you found your visuals.</p>
-        </div>
-      </div>
-      <div class="ov-card">
-        <div class="ov-num">5</div>
-        <div class="ov-text">
-          <h3>🗣️ Your Preparation</h3>
-          <p>How are you preparing to deliver this? Practice methods, what you still need to work on, or how you are managing nerves.</p>
-        </div>
+      <div class="starter-chips">
+        <div class="chip">My hook is…</div>
+        <div class="chip">I plan to open with…</div>
+        <div class="chip">I chose this hook because…</div>
+        <div class="chip">I want the audience to feel…</div>
       </div>
     </div>
+  </div>
  
-    <div class="tip-box">
-      <div class="icon">🌟</div>
-      <div>
-        <h4>Why does this matter?</h4>
-        <p>This recording counts as 5% of your overall grade. More importantly, it helps you organise your thoughts before the final exam, and your teacher can give you feedback to help you improve before presentation day.</p>
+  <div class="script-block">
+    <div class="script-label"><div class="num">3</div> Part 2 — My Personal Story 📖</div>
+    <div class="script-body">
+      <div class="script-purpose">Briefly describe the real personal experience that connects YOU to this idea. You do not need to tell the full story here — just describe it and explain how it links to your message.</div>
+      <div class="example-phrase">
+        <strong>"After the hook, I will share a story from when I was 14. I was having a really difficult week at school, and a girl I barely knew left a kind note on my desk. I did not know her well, but that small thing stayed with me for years. In my talk, I will use this story to show that kindness does not need to be planned or big — it just needs to be real."</strong>
+        <div class="phrase-note">💬 Real TED Talks always anchor the argument in a human moment. Your story does not need to be dramatic — it just needs to be true and clearly connected to your idea.</div>
+      </div>
+      <div class="example-phrase">
+        "I chose this story because it <em>shows</em> the idea rather than just <em>stating</em> it. I want the audience to see that my topic is not theoretical — it comes from something that actually happened."
+      </div>
+      <div class="starter-chips">
+        <div class="chip">My story is about a time when…</div>
+        <div class="chip">This experience taught me that…</div>
+        <div class="chip">I chose this story because…</div>
+        <div class="chip">This connects to my idea by…</div>
       </div>
     </div>
+  </div>
  
-    <div class="card">
-      <div class="card-title"><div class="dot"></div> Grade Breakdown Reminder</div>
-      <div class="rubric-row">
-        <div class="rubric-card coral">
-          <div class="pct">40%</div>
-          <h4>Final Presentation</h4>
-          <p>Delivery of your full TED-style career talk on exam day</p>
-        </div>
-        <div class="rubric-card gold">
-          <div class="pct">10%</div>
-          <h4>Oral Defence</h4>
-          <p>Answering teacher questions after your presentation</p>
-        </div>
+  <div class="script-block">
+    <div class="script-label"><div class="num">4</div> Part 3 — My Supporting Points 📌</div>
+    <div class="script-body">
+      <div class="script-purpose">Describe the 2–3 ideas, examples, or evidence you will use to support and develop your big idea. These are not separate sub-topics — they are reasons or proof that your idea is true.</div>
+      <div class="example-phrase">
+        <strong>"To support my idea that kindness is contagious, I have three points. First, the science — neuroscience research shows that watching someone be kind can produce what researchers call 'moral elevation' in the observer — a warm, motivating feeling that makes them more likely to be kind themselves. Second, a real-world example — I will talk about the 'caffè sospeso' tradition in Italy, where customers pay for an extra coffee for a stranger they will never meet. Third, a personal and cultural connection — the Islamic concept of sadaqah, and how everyday generosity is woven into the way many of us were raised here in the UAE."</strong>
+        <div class="phrase-note">💬 Strong TED Talks often mix science, real-world examples, and personal or cultural relevance. Make sure each point actually <em>proves</em> your idea — not just describes something loosely related to it.</div>
       </div>
-      <div class="tip-box" style="margin-bottom:0">
-        <div class="icon">🎯</div>
-        <div>
-          <h4>This audio = 5% (part of your preparation grade)</h4>
-          <p>Use the Defence Questions tab to practise the 10 questions your teacher may ask on exam day — being ready for those will help your 10% oral defence grade!</p>
-        </div>
+      <div class="starter-chips">
+        <div class="chip">My first point is…</div>
+        <div class="chip">To support my idea I will…</div>
+        <div class="chip">A real example of this is…</div>
+        <div class="chip">This proves my idea because…</div>
       </div>
     </div>
+  </div>
  
-  </div><!-- /tab-overview -->
- 
- 
-  <!-- ══════════════════════════════════════════════
-       TAB 2 · SCRIPT GUIDE
-  ══════════════════════════════════════════════ -->
-  <div class="tab-panel" id="tab-script">
- 
-    <div class="section-head">
-      <div class="section-icon icon-coral">📝</div>
-      <div class="section-head-text">
-        <h2>Your Audio Script Guide</h2>
-        <p>Use these example phrases and sentence starters to help you record naturally. You do NOT need to use these exact words — they are just a guide to help you get started.</p>
+  <div class="script-block">
+    <div class="script-label"><div class="num">5</div> Part 4 — My Slide Design 🎨</div>
+    <div class="script-body">
+      <div class="script-purpose">This section is especially important for your oral defence. Explain your visual choices — colour, font, image style, amount of text — and where you sourced your images. Be ready to justify every design decision.</div>
+      <div class="example-phrase">
+        <strong>"For my slides, I chose a warm palette — cream and terracotta tones — because kindness feels warm, human, and gentle, not cold or corporate. I kept each slide very minimal: usually one image and just a few words, because I want the audience to listen to me, not read a screen full of bullet points."</strong>
+      </div>
+      <div class="example-phrase">
+        <strong>"For my images, I used Unsplash — it is free and copyright-safe. I searched for real, candid photographs of human connection — people helping each other, quiet moments of care — rather than posed stock photos that look artificial. I think using genuine, natural images better supports a talk about authentic kindness."</strong>
+        <div class="phrase-note">💬 Your teacher will ask where you got your images in the oral defence. Always name the source — Unsplash, Pexels, Canva, or your own photos — and explain why you chose those specific images, not just any images.</div>
+      </div>
+      <div class="example-phrase">
+        "I chose a simple, readable sans-serif font because I did not want the typography to compete with the emotional weight of the content. The design should serve the message, not distract from it."
+      </div>
+      <div class="starter-chips">
+        <div class="chip">I chose these colours because…</div>
+        <div class="chip">My slides are minimal because…</div>
+        <div class="chip">I sourced my images from…</div>
+        <div class="chip">My font choice was… because…</div>
+        <div class="chip">The design matches my topic because…</div>
       </div>
     </div>
+  </div>
  
-    <div class="alert-box">
-      <div class="icon">⏱️</div>
-      <div>
-        <h4>Target time: 3–5 minutes total</h4>
-        <p>Spend roughly 30–60 seconds on each of the five sections. You do not need to memorise a script — speaking naturally from notes is perfectly fine and actually sounds better!</p>
+  <div class="script-block">
+    <div class="script-label"><div class="num">6</div> Part 5 — My Preparation &amp; Closing 🗣️</div>
+    <div class="script-body">
+      <div class="script-purpose">End by briefly explaining how you are preparing to deliver your TED Talk — and close politely and professionally.</div>
+      <div class="example-phrase">
+        <strong>"To prepare my delivery, I am practising out loud every day and timing myself to make sure I stay within the limit. I also recorded myself on my phone once and listened back — it helped me catch my filler words and hear whether my pacing was natural."</strong>
+      </div>
+      <div class="example-phrase">
+        "One thing I am still working on is reducing filler words like 'um' and 'like', and making more eye contact instead of looking at my notes. I know that looking at the audience is what makes a TED Talk feel personal rather than like a report being read aloud."
+      </div>
+      <div class="example-phrase">
+        <strong>"That is the end of my presentation plan. Thank you for listening, and I look forward to your feedback."</strong>
+        <div class="phrase-note">💬 A professional, polite close matters — this is a spoken communication course. Always thank the listener.</div>
+      </div>
+      <div class="starter-chips">
+        <div class="chip">To prepare I am…</div>
+        <div class="chip">I practise by…</div>
+        <div class="chip">One thing I am still working on is…</div>
+        <div class="chip">Thank you for listening.</div>
       </div>
     </div>
+  </div>
  
-    <!-- Section 1: Opening -->
-    <div class="script-block">
-      <div class="script-label"><div class="num">1</div> Opening — Introduce yourself & your topic</div>
-      <div class="script-body">
-        <div class="script-purpose">Start by greeting your teacher and telling them your presentation topic.</div>
-        <div class="example-phrase">
-          <strong>"Hi, my name is [name], and I am a student in LSC 1503. For my final presentation, I have chosen to talk about a career in [topic]."</strong>
-          <div class="phrase-note">💬 Keep this simple — just your name and your topic.</div>
-        </div>
-        <div class="example-phrase">
-          "In this audio recording, I will give you an overview of my presentation plan — my hook, my story, my main points, and my PowerPoint design."
-          <div class="phrase-note">💬 This tells the listener what to expect — like a mini roadmap.</div>
-        </div>
-        <div class="starter-chips">
-          <div class="chip">My topic is…</div>
-          <div class="chip">I decided to talk about…</div>
-          <div class="chip">My presentation is about…</div>
-        </div>
-      </div>
+  <div class="tip-box">
+    <div class="icon">🎤</div>
+    <div>
+      <h4>Recording Tips</h4>
+      <p>Find a quiet room. Speak at a calm, natural pace — silence is not a mistake. Do NOT read word-for-word from a written script; it will sound flat. Use bullet-point notes and speak from what you genuinely think and feel. You can re-record as many times as you need before submitting.</p>
     </div>
+  </div>
  
-    <!-- Section 2: Hook -->
-    <div class="script-block">
-      <div class="script-label"><div class="num">2</div> Part 1 — My Hook 🪝</div>
-      <div class="script-body">
-        <div class="script-purpose">Explain how you plan to open your presentation to grab your audience's attention in the first 30 seconds.</div>
-        <div class="example-phrase">
-          <strong>"To start my presentation, I am planning to open with a surprising statistic. I will say something like: 'Did you know that [career] is expected to grow by 25% in the next 10 years?' I chose this hook because I think it will immediately make the audience wonder why this career is growing so fast."</strong>
-          <div class="phrase-note">💬 Explain your hook TYPE and WHY you chose it. Hook types include: a question, a statistic, a short story, a bold statement, or a quote.</div>
-        </div>
-        <div class="example-phrase">
-          "I am going to start with a personal question to the audience: 'Have you ever wondered what it feels like to [do this job every day]?' I hope this makes them think about the topic right away."
-        </div>
-        <div class="starter-chips">
-          <div class="chip">I plan to open with…</div>
-          <div class="chip">My hook will be…</div>
-          <div class="chip">I chose this hook because…</div>
-          <div class="chip">I think this will grab attention because…</div>
-        </div>
-      </div>
+</div>
+ 
+<!-- ══════════ QUESTIONS ══════════ -->
+<div class="tab-panel" id="tab-questions">
+ 
+  <div class="section-head">
+    <div class="section-icon icon-sage">🎯</div>
+    <div class="section-head-text">
+      <h2>Oral Defence Questions</h2>
+      <p>On your presentation day, your teacher will ask you at least 3 of these 10 questions. Click each one to see a coaching tip and a sample answer idea, written with a TED Talk topic in mind. These are models to help you think — not scripts to memorise.</p>
     </div>
+  </div>
  
-    <!-- Section 3: Story -->
-    <div class="script-block">
-      <div class="script-label"><div class="num">3</div> Part 2 — My Personal Story 📖</div>
-      <div class="script-body">
-        <div class="script-purpose">Briefly describe the personal story or connection that links you to this career topic.</div>
-        <div class="example-phrase">
-          <strong>"After my hook, I will share a short personal story about why I chose this topic. When I was in school, I had an experience that made me interested in [career field]… I will not tell the whole story right now, but I will connect it to my main message: [one sentence summary of your message]."</strong>
-          <div class="phrase-note">💬 You don't need to tell the full story here — just describe it briefly and explain how it connects to your career topic.</div>
-        </div>
-        <div class="example-phrase">
-          "I chose this topic because someone in my family works in [this field], and I have always been curious about what it really involves. I will use my personal connection to make the presentation feel more real to the audience."
-        </div>
-        <div class="starter-chips">
-          <div class="chip">My personal connection is…</div>
-          <div class="chip">I will share a story about…</div>
-          <div class="chip">This topic matters to me because…</div>
-          <div class="chip">My story is about…</div>
-        </div>
-      </div>
+  <div class="alert-box">
+    <div class="icon">📌</div>
+    <div>
+      <h4>Your oral defence = 10% of your grade</h4>
+      <p>Reading and thinking about these questions <em>now</em> — before your presentation is even finished — will make you far more confident and articulate on exam day. Your teacher will choose at least 3 questions from this list.</p>
     </div>
+  </div>
  
-    <!-- Section 4: Main Points -->
-    <div class="script-block">
-      <div class="script-label"><div class="num">4</div> Part 3 — My Main Points 📌</div>
-      <div class="script-body">
-        <div class="script-purpose">Mention your 2–3 key points about the career. Keep this brief — just one sentence per point.</div>
-        <div class="example-phrase">
-          <strong>"My presentation will have three main points. First, I will explain what a [job title] actually does every day. Second, I will talk about the skills and qualifications needed. Third, I will share information about the job market — how many opportunities there are in the UAE and what the salary range looks like."</strong>
-          <div class="phrase-note">💬 Use "First… Second… Third…" to organise your points clearly.</div>
-        </div>
-        <div class="example-phrase">
-          "My three key points are: the responsibilities of this career, the required education and training, and the future growth of this field. I chose these because I think they are the most important things my audience needs to understand about this job."
-        </div>
-        <div class="starter-chips">
-          <div class="chip">My first point is…</div>
-          <div class="chip">I will cover three topics…</div>
-          <div class="chip">My main points are…</div>
-          <div class="chip">I chose these points because…</div>
-        </div>
-      </div>
+  <div id="questions-container"></div>
+ 
+</div>
+ 
+<!-- ══════════ CHECKLIST ══════════ -->
+<div class="tab-panel" id="tab-checklist">
+ 
+  <div class="section-head">
+    <div class="section-icon icon-blue">✅</div>
+    <div class="section-head-text">
+      <h2>Am I Ready to Record?</h2>
+      <p>Tick each item as you complete or think it through. When all items are ticked, you are ready to record and submit on Teams.</p>
     </div>
+  </div>
  
-    <!-- Section 5: Design -->
-    <div class="script-block">
-      <div class="script-label"><div class="num">5</div> Part 4 — My PowerPoint Design 🎨</div>
-      <div class="script-body">
-        <div class="script-purpose">This is important for your oral defence! Explain your slide design choices and where you got your images.</div>
-        <div class="example-phrase">
-          <strong>"For my PowerPoint design, I chose a clean, professional theme with a dark blue and white colour scheme. I chose these colours because they look modern and professional, which matches the serious tone of my topic. I used simple fonts so the text is easy to read, and I kept each slide uncluttered with only 3–4 bullet points."</strong>
-        </div>
-        <div class="example-phrase">
-          <strong>"For my images, I sourced them from Unsplash and Pexels — both are free, copyright-free websites. I made sure all images were relevant to each slide and high quality. I avoided using Google Images directly because the copyright is not always clear."</strong>
-          <div class="phrase-note">💬 Mention WHERE you got your images! Good sources: Unsplash, Pexels, Canva, or photos you took yourself.</div>
-        </div>
-        <div class="starter-chips">
-          <div class="chip">I chose this design because…</div>
-          <div class="chip">My colour scheme is… because…</div>
-          <div class="chip">I got my images from…</div>
-          <div class="chip">I kept my slides simple because…</div>
-        </div>
-      </div>
+  <div class="progress-row">
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" id="cl-bar"></div></div>
+    <div class="progress-label" id="cl-label">0%</div>
+  </div>
+ 
+  <div id="checklist-items"></div>
+ 
+  <div class="ready-msg" id="ready-msg">
+    <h3>🎉 You're Ready to Record!</h3>
+    <p>All items are ticked. Open Microsoft Teams, find your Assignment, and record your 3–5 minute audio plan. You have done the thinking — now just say it out loud. Good luck!</p>
+  </div>
+ 
+</div>
+ 
+<!-- ══════════ TEAMS ══════════ -->
+<div class="tab-panel" id="tab-teams">
+ 
+  <div class="section-head">
+    <div class="section-icon icon-plum">📱</div>
+    <div class="section-head-text">
+      <h2>How to Submit on Microsoft Teams</h2>
+      <p>Your teacher has created an Assignment for you on Teams. Follow these steps to record and submit your audio plan.</p>
     </div>
+  </div>
  
-    <!-- Section 6: Preparation -->
-    <div class="script-block">
-      <div class="script-label"><div class="num">6</div> Part 5 — My Preparation & Closing 🗣️</div>
-      <div class="script-body">
-        <div class="script-purpose">End your recording by briefly explaining how you are preparing and what you still plan to work on.</div>
-        <div class="example-phrase">
-          <strong>"To prepare for my presentation, I am planning to practise in front of a mirror at home and record myself once to check my timing and pronunciation. I also wrote notes on small cards so I can remember the key points without reading from the slides."</strong>
-        </div>
-        <div class="example-phrase">
-          "One thing I still need to work on is making eye contact and speaking more slowly when I am nervous. But overall, I feel quite prepared and I am looking forward to presenting."
-        </div>
-        <div class="example-phrase">
-          <strong>"That is the end of my audio plan. Thank you for listening, and I look forward to your feedback."</strong>
-          <div class="phrase-note">💬 Always close politely — this is professional communication!</div>
-        </div>
-        <div class="starter-chips">
-          <div class="chip">To prepare, I am…</div>
-          <div class="chip">I plan to practise by…</div>
-          <div class="chip">One challenge I have is…</div>
-          <div class="chip">Thank you for listening.</div>
-        </div>
-      </div>
+  <div class="card">
+    <div class="card-title"><div class="dot"></div> Step-by-Step Guide</div>
+    <div class="step-row">
+      <div class="step-circle">1</div>
+      <div class="step-text"><h4>Open Microsoft Teams</h4><p>Log in with your HCT student account and go to your <strong>LSC 1503</strong> class channel.</p></div>
     </div>
- 
-    <div class="tip-box">
-      <div class="icon">🎤</div>
-      <div>
-        <h4>Recording Tips</h4>
-        <p>Find a quiet room. Speak at a normal pace — not too fast. It's okay to pause and think. You can record in one take or record sections separately. Do NOT read word-for-word — speak naturally from notes.</p>
-      </div>
+    <div class="step-row">
+      <div class="step-circle">2</div>
+      <div class="step-text"><h4>Find the Assignment</h4><p>Click <strong>Assignments</strong> in the top menu. Look for the assignment named <em>"Audio Presentation Plan"</em> or as named by your teacher.</p></div>
     </div>
- 
-  </div><!-- /tab-script -->
- 
- 
-  <!-- ══════════════════════════════════════════════
-       TAB 3 · DEFENCE QUESTIONS
-  ══════════════════════════════════════════════ -->
-  <div class="tab-panel" id="tab-questions">
- 
-    <div class="section-head">
-      <div class="section-icon icon-sage">🎯</div>
-      <div class="section-head-text">
-        <h2>Oral Defence Questions</h2>
-        <p>On your presentation day, your teacher will ask you at least 3 of these 10 questions. Read each one, then click to see tips and a sample answer idea. Use these to help you think — do not memorise the examples!</p>
-      </div>
+    <div class="step-row">
+      <div class="step-circle">3</div>
+      <div class="step-text"><h4>Record Your Audio</h4><p>Click <strong>Add work</strong> → <strong>Video / Audio recording</strong>. Teams will open a recorder. Allow microphone access when prompted.</p></div>
     </div>
- 
-    <div class="alert-box">
-      <div class="icon">📌</div>
-      <div>
-        <h4>Your oral defence = 10% of your grade</h4>
-        <p>Preparing good answers now — even before your presentation is finished — will make you much more confident on exam day. Your teacher will ask at least 3 questions from this list.</p>
-      </div>
+    <div class="step-row">
+      <div class="step-circle">4</div>
+      <div class="step-text"><h4>Make Your Recording</h4><p>Cover the five sections: Big Idea → Hook → Personal Story → Supporting Points → Slide Design. Aim for 3–5 minutes. Re-record if you need to.</p></div>
     </div>
- 
-    <div id="questions-container">
-      <!-- Built by JS -->
+    <div class="step-row">
+      <div class="step-circle">5</div>
+      <div class="step-text"><h4>Review &amp; Attach</h4><p>Play your recording back once to check audio quality is clear. Attach it to the assignment. You may also include any planning notes you used.</p></div>
     </div>
- 
-  </div><!-- /tab-questions -->
- 
- 
-  <!-- ══════════════════════════════════════════════
-       TAB 4 · CHECKLIST
-  ══════════════════════════════════════════════ -->
-  <div class="tab-panel" id="tab-checklist">
- 
-    <div class="section-head">
-      <div class="section-icon icon-blue">✅</div>
-      <div class="section-head-text">
-        <h2>Am I Ready to Record?</h2>
-        <p>Tick each item when you have completed or thought about it. When all items are ticked, you are ready to record and submit on Teams.</p>
-      </div>
+    <div class="step-row">
+      <div class="step-circle">6</div>
+      <div class="step-text"><h4>Submit ✅</h4><p>Click <strong>Turn in</strong> and confirm. Do this before the deadline your teacher has set.</p></div>
     </div>
+  </div>
  
-    <div class="progress-row">
-      <div class="progress-bar-wrap"><div class="progress-bar-fill" id="cl-bar"></div></div>
-      <div class="progress-label" id="cl-label">0%</div>
+  <div class="tip-box">
+    <div class="icon">🎧</div>
+    <div>
+      <h4>Audio quality tips</h4>
+      <p>Use earphones with a built-in microphone for clearer sound. Record in a quiet space — a bedroom or study room works well. Avoid fans, open windows, or echo-heavy rooms. Speak close to the microphone but not directly into it.</p>
     </div>
+  </div>
  
-    <div id="checklist-items"></div>
- 
-    <div class="ready-msg" id="ready-msg">
-      <h3>🎉 You're Ready to Record!</h3>
-      <p>All items are ticked. Open Microsoft Teams, go to your Assignment, and record your audio. Good luck — you've got this!</p>
+  <div class="card">
+    <div class="card-title"><div class="dot"></div> Alternative: Record on your phone first</div>
+    <p style="font-size:.86rem;color:var(--muted);line-height:1.55;margin-bottom:.9rem;">If you prefer to record outside Teams first, that is fine too.</p>
+    <div class="step-row">
+      <div class="step-circle" style="background:var(--sage)">A</div>
+      <div class="step-text"><h4>Record on your phone</h4><p>Use Voice Memos (iPhone) or Voice Recorder / Sound Recorder (Android).</p></div>
     </div>
- 
-  </div><!-- /tab-checklist -->
- 
- 
-  <!-- ══════════════════════════════════════════════
-       TAB 5 · HOW TO SUBMIT
-  ══════════════════════════════════════════════ -->
-  <div class="tab-panel" id="tab-teams">
- 
-    <div class="section-head">
-      <div class="section-icon icon-plum">📱</div>
-      <div class="section-head-text">
-        <h2>How to Submit on Microsoft Teams</h2>
-        <p>Your teacher has created an Assignment for you on Teams. Follow these steps to record and submit your audio.</p>
-      </div>
+    <div class="step-row">
+      <div class="step-circle" style="background:var(--sage)">B</div>
+      <div class="step-text"><h4>Save the file</h4><p>Export as .m4a or .mp3 — both are accepted in Teams.</p></div>
     </div>
- 
-    <div class="card">
-      <div class="card-title"><div class="dot"></div> Step-by-Step Guide</div>
- 
-      <div class="step-row">
-        <div class="step-circle">1</div>
-        <div class="step-text">
-          <h4>Open Microsoft Teams</h4>
-          <p>Log in with your HCT student account. Go to your <strong>LSC 1503</strong> class channel.</p>
-        </div>
-      </div>
-      <div class="step-row">
-        <div class="step-circle">2</div>
-        <div class="step-text">
-          <h4>Find the Assignment</h4>
-          <p>Click on <strong>Assignments</strong> in the top menu. Look for the assignment titled <em>"Audio Presentation Plan"</em> (or as named by your teacher).</p>
-        </div>
-      </div>
-      <div class="step-row">
-        <div class="step-circle">3</div>
-        <div class="step-text">
-          <h4>Record Your Audio</h4>
-          <p>Inside the assignment, click <strong>Add work</strong> → <strong>Video / Audio recording</strong>. Teams will open a recording tool directly in the app. Allow microphone access when prompted.</p>
-        </div>
-      </div>
-      <div class="step-row">
-        <div class="step-circle">4</div>
-        <div class="step-text">
-          <h4>Make Your Recording</h4>
-          <p>Speak clearly and cover your five sections: Hook → Story → Main Points → Design → Preparation. Aim for 3–5 minutes. You can re-record if needed.</p>
-        </div>
-      </div>
-      <div class="step-row">
-        <div class="step-circle">5</div>
-        <div class="step-text">
-          <h4>Review & Attach</h4>
-          <p>Play back your recording once to check the audio quality is clear. If you are happy, attach it to the assignment. You can also attach any notes you used.</p>
-        </div>
-      </div>
-      <div class="step-row">
-        <div class="step-circle">6</div>
-        <div class="step-text">
-          <h4>Submit ✅</h4>
-          <p>Click <strong>Turn in</strong>. You will see a confirmation screen. Do this <strong>before the deadline</strong> your teacher has set.</p>
-        </div>
-      </div>
+    <div class="step-row">
+      <div class="step-circle" style="background:var(--sage)">C</div>
+      <div class="step-text"><h4>Upload to Teams</h4><p>In your assignment, click <strong>Add work</strong> → <strong>Upload from device</strong> → select your file → <strong>Turn in</strong>.</p></div>
     </div>
+  </div>
  
-    <div class="tip-box">
-      <div class="icon">🎧</div>
-      <div>
-        <h4>Audio quality tips</h4>
-        <p>Use earphones with a microphone for best quality. Record in a quiet room — a bedroom or study area works well. Avoid recording near a fan or open window. Speak close to the microphone but not directly into it.</p>
-      </div>
+  <div class="alert-box">
+    <div class="icon">⚠️</div>
+    <div>
+      <h4>Important reminders</h4>
+      <p>Submit before the deadline. Make sure your name is clearly stated at the start of your recording. If you have a technical issue, contact your teacher as early as possible — do not wait until the last minute.</p>
     </div>
+  </div>
  
-    <div class="card">
-      <div class="card-title"><div class="dot"></div> Alternative: Record Outside Teams First</div>
-      <p style="font-size:0.86rem; color:var(--muted); line-height:1.55; margin-bottom:0.8rem;">If you prefer to record using your phone's voice memo app first, that is also fine.</p>
-      <div class="step-row">
-        <div class="step-circle" style="background: var(--sage);">A</div>
-        <div class="step-text"><h4>Record on your phone</h4><p>Use your phone's Voice Memos app (iPhone) or Sound Recorder (Android).</p></div>
-      </div>
-      <div class="step-row">
-        <div class="step-circle" style="background: var(--sage);">B</div>
-        <div class="step-text"><h4>Save the file</h4><p>Export as .m4a or .mp3 — both are accepted.</p></div>
-      </div>
-      <div class="step-row">
-        <div class="step-circle" style="background: var(--sage);">C</div>
-        <div class="step-text"><h4>Upload to Teams Assignment</h4><p>In the Assignment, click <strong>Add work</strong> → <strong>Upload from device</strong> → select your audio file → Turn in.</p></div>
-      </div>
-    </div>
- 
-    <div class="alert-box">
-      <div class="icon">⚠️</div>
-      <div>
-        <h4>Important reminders</h4>
-        <p>Submit before the deadline. Check that your name can be heard clearly at the start of your recording. Late submissions may affect your grade — contact your teacher early if you have a problem.</p>
-      </div>
-    </div>
- 
-  </div><!-- /tab-teams -->
+</div>
  
 </main>
  
 <footer>
-  LSC 1503 · Professional Spoken Communication · HCT &nbsp;|&nbsp; Audio Presentation Plan Activity
+  LSC 1503 · Professional Spoken Communication · HCT &nbsp;|&nbsp; Audio Presentation Plan — TED Talk Stage
 </footer>
  
 <script>
-/* ── TAB SWITCHING ── */
-function switchTab(id) {
+function switchTab(id, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + id).classList.add('active');
-  event.currentTarget.classList.add('active');
+  btn.classList.add('active');
 }
  
-/* ── QUESTIONS DATA ── */
+/* ── QUESTIONS — TED Talk context ── */
 const questions = [
   {
-    q: "Why did you choose that PowerPoint style or design?",
-    tip: "Talk about your colour choices, layout, font style, and overall theme. Explain how they match the tone of your topic.",
-    sample: "I chose a professional blue and white theme because my topic — a career in healthcare — needs to feel calm and trustworthy. I used a clean font and avoided too many animations so the audience could focus on the information."
+    q:"Why did you choose that PowerPoint style or design?",
+    tip:"Talk about your colour palette, image style, font, amount of text on each slide — and explain how every choice supports the emotional tone of your TED Talk idea.",
+    sample:"I chose a warm, minimal design with soft cream and terracotta tones because my topic — kindness — should feel human and gentle, not clinical or corporate. I kept each slide to one image and very few words because I wanted the audience to listen to me, not read the screen. Every visual choice was made to serve the emotion of the talk."
   },
   {
-    q: "Where did you source your images?",
-    tip: "Name the website or source. Good answers include: Unsplash, Pexels, Canva, or your own photos. Mention that you checked for copyright.",
-    sample: "I used images from Unsplash and Canva. Both provide copyright-free images that are safe to use in presentations. I made sure every image was relevant to the slide it appeared on."
+    q:"Where did you source your images?",
+    tip:"Name the exact website or source. Good options: Unsplash, Pexels, Canva, or photos you took yourself. Also explain HOW you chose images — what you looked for and why.",
+    sample:"I used Unsplash because it is free and copyright-safe. I searched specifically for candid, natural moments of human connection — people helping each other in ordinary situations — rather than posed or artificial stock photos. I felt that genuine images were more honest, and honesty is central to my topic."
   },
   {
-    q: "How did you get the ideas for your presentation topic?",
-    tip: "Describe your thought process — a personal experience, a family connection, research you did, or something from class that inspired you.",
-    sample: "I chose this topic because my aunt works as an architect, and I have always been curious about her job. When I started researching, I found it was a growing field in the UAE, which made it even more interesting to explore."
+    q:"How did you get the ideas for your presentation topic?",
+    tip:"Describe the real moment, experience, or observation that sparked your idea. What made you think this was worth talking about? Why did it feel meaningful to you personally?",
+    sample:"The idea came from a real moment. When I was going through a very hard week, a classmate I barely knew did something unexpectedly kind. It was a small thing, but I carried it with me for years — and I started wondering why. That question led me to the research and eventually to this talk."
   },
   {
-    q: "What part of the presentation took the most time to complete? Why?",
-    tip: "Be specific — was it research? Designing slides? Writing the script? Practising delivery? Explain the challenge honestly.",
-    sample: "The research phase took the longest because I wanted to find accurate UAE-specific statistics about salaries and job opportunities. I had to check several websites and compare the information to make sure it was reliable."
+    q:"What part of the presentation took the most time to complete? Why?",
+    tip:"Be specific. Was it choosing the right personal story? Structuring the argument? Getting the slides right? Practising delivery? Explain what made it difficult.",
+    sample:"Choosing the right personal story took the longest. I had several moments I could have shared, but I kept asking myself: which one best shows the idea rather than just describes it? I wanted a story that would let the audience feel the idea before I explained it — that took real time to figure out."
   },
   {
-    q: "How did you prepare for presenting to an audience?",
-    tip: "Mention specific practice methods — recording yourself, practising in front of a mirror, presenting to a family member, using flashcards, etc.",
-    sample: "I practised by recording myself on my phone three times to check my pronunciation and timing. I also practised in front of my sister to get feedback, and I wrote key words on small note cards so I would not forget my points."
+    q:"How did you prepare for presenting to an audience?",
+    tip:"Name specific preparation methods — recording yourself, timing your talk, practising in front of a mirror or family member, using flashcards or bullet-point notes.",
+    sample:"I recorded myself three times and listened back each time to catch filler words and check my pacing. I also practised the opening separately at least five times, because I know the hook is the most important moment — if you lose the audience there, it is very hard to get them back."
   },
   {
-    q: "What is one thing you would improve if you had more time?",
-    tip: "This is about self-reflection. Choose something genuine — maybe adding more visuals, more data, practising the opening more, or improving one slide.",
-    sample: "If I had more time, I would add a short video clip to one of my slides to make it more engaging. I think showing a real person doing this job would help the audience connect with the topic."
+    q:"What is one thing you would improve if you had more time?",
+    tip:"Choose something genuine and specific — not just 'more practice.' Maybe a point you wanted to develop more fully, a slide that still feels weak, or a part of your delivery you want to strengthen.",
+    sample:"I would develop my second supporting point more fully. I found a piece of research I did not have enough time to include properly, and I think it would have made that section much more convincing. Right now it is slightly shorter than the other points and I can feel the imbalance."
   },
   {
-    q: "How did you remember what to say on each slide?",
-    tip: "Describe your memory strategy — keywords on slides, small notes, practice repetition, using speaker notes, or knowing your topic well.",
-    sample: "I used the key words on each slide as a reminder, and I practised until I knew the main idea for each slide. I did not memorise word for word — instead, I understood the topic so well that I could speak naturally."
+    q:"How did you remember what to say on each slide?",
+    tip:"Describe your memory or cueing strategy — keywords on slides, using the image as a visual trigger, knowing your topic deeply enough to speak naturally, bullet-point notes.",
+    sample:"I used the image on each slide as a memory anchor. Instead of writing my script on the slides, I paired each image with a specific part of my talk — so when I saw the image, I knew exactly what I was going to say. This made the delivery feel much more natural and less like I was reading."
   },
   {
-    q: "What skills did you develop while completing this presentation?",
-    tip: "Think broadly — research skills, digital skills, speaking confidence, time management, organising ideas. Link them to the course learning outcomes.",
-    sample: "I developed my research skills, especially finding reliable sources. I also improved my PowerPoint design skills by learning how to choose fonts and layouts that look professional. Most importantly, I became more confident speaking about a complex topic in English."
+    q:"What skills did you develop while completing this presentation?",
+    tip:"Think beyond speaking skills — critical thinking, storytelling, editing your own ideas, structuring an argument, choosing what NOT to include, slide design, self-reflection.",
+    sample:"I developed my storytelling skills the most. I realised that deciding what to leave OUT is just as important as deciding what to include — not every true thing belongs in a 5-minute talk. I also became much more aware of my filler words, which I had never really noticed before listening to myself on a recording."
   },
   {
-    q: "Did you face any challenges? How did you overcome them?",
-    tip: "Be honest — technical problems, time management, language difficulties, nerves, finding information. Show what action you took to solve the problem.",
-    sample: "My main challenge was finding information about this career specifically in the UAE rather than internationally. I overcame this by searching the UAE government's jobs portal and LinkedIn to find local data, which actually made my presentation stronger."
+    q:"Did you face any challenges? How did you overcome them?",
+    tip:"Be honest. Common TED Talk challenges include: making a familiar topic feel fresh, finding the right story, structuring the argument clearly, managing anxiety, or making the slides support rather than replace your words.",
+    sample:"My main challenge was making 'kindness' feel like a fresh and interesting idea when most people already agree it is good. I had to go deeper — find the neuroscience, find the cultural example, find the surprising angle — so that my audience would learn something they did not already know."
   },
   {
-    q: "Did you feel confident during the presentation? If yes, what helped? If no, how could you improve?",
-    tip: "Be honest and reflective. If confident — explain what preparation helped. If nervous — describe what you could do differently next time.",
-    sample: "I felt nervous at the beginning, especially making eye contact, but once I started talking about my personal story, I felt more relaxed. Next time, I would practise the opening section more so I feel settled right from the start."
+    q:"Did you feel confident during the presentation? If yes, what helped? If no, how could you improve?",
+    tip:"Be honest and genuinely reflective. If confident — what specific thing made the difference? If nervous — what exactly caused it, and what would you do differently next time?",
+    sample:"I was nervous at the very start — especially during the hook, because asking a question and waiting for the audience to react felt vulnerable. But once I moved into my personal story, I relaxed, because I was talking about something that was genuinely mine. Next time I would practise the opening even more so that first moment feels settled."
   }
 ];
  
-/* Build questions */
-const qContainer = document.getElementById('questions-container');
+const qc = document.getElementById('questions-container');
 questions.forEach((item, i) => {
-  const wrap = document.createElement('div');
-  wrap.className = 'q-accordion';
-  wrap.innerHTML = `
+  const w = document.createElement('div');
+  w.className = 'q-accordion';
+  w.innerHTML = `
     <button class="q-header" onclick="toggleQ(this)">
       <div class="q-num">${i+1}</div>
       <div class="q-text">${item.q}</div>
@@ -986,69 +676,49 @@ questions.forEach((item, i) => {
     <div class="q-body">
       <p class="answer-tip">💡 <em>${item.tip}</em></p>
       <div class="sample-answer"><strong>Sample idea:</strong><br>${item.sample}</div>
-    </div>
-  `;
-  qContainer.appendChild(wrap);
+    </div>`;
+  qc.appendChild(w);
 });
  
 function toggleQ(btn) {
   const body = btn.nextElementSibling;
   const isOpen = btn.classList.contains('open');
-  // Close all
   document.querySelectorAll('.q-header').forEach(h => h.classList.remove('open'));
   document.querySelectorAll('.q-body').forEach(b => b.classList.remove('open'));
-  if (!isOpen) {
-    btn.classList.add('open');
-    body.classList.add('open');
-  }
+  if (!isOpen) { btn.classList.add('open'); body.classList.add('open'); }
 }
  
 /* ── CHECKLIST ── */
 const checks = [
-  { h: "I have chosen my presentation topic", p: "Make sure your career topic is decided and approved by your teacher." },
-  { h: "I know my hook type and opening sentence", p: "E.g. a question, statistic, bold statement, or short story." },
-  { h: "I have a personal story ready to mention", p: "A brief 2–3 sentence story connecting you to this career topic." },
-  { h: "I know my 2–3 main points", p: "Each point is one key aspect of your career (e.g. duties, skills, job market)." },
-  { h: "My PowerPoint design is started or planned", p: "You can explain your colour scheme, font choices, and layout style." },
-  { h: "I know where I found my images", p: "E.g. Unsplash, Pexels, Canva — be ready to name the source." },
-  { h: "I have read all 10 oral defence questions", p: "At least 3 will be asked on your presentation day." },
-  { h: "I can answer at least 5 questions in my head", p: "You don't need perfect answers yet — just enough to speak for 30 seconds on each." },
-  { h: "I am in a quiet space to record", p: "Choose a room with no background noise and good microphone access." },
-  { h: "I have my notes or key words ready for the recording", p: "You do not need a full script — just a few keywords for each section." }
+  {h:"I have a clear TED Talk topic and title", p:"Your topic should be one big idea — not a report topic or a career description. You can express it as a statement: 'Kindness is contagious.'"},
+  {h:"I can state my core message in one sentence", p:"What do you want your audience to leave believing or feeling? If you can't say it in one sentence, the message may need to be sharper."},
+  {h:"I know what type of hook I will use and why", p:"A rhetorical question, surprising fact, bold statement, vivid personal moment, or quote — and you can explain why it fits your specific idea."},
+  {h:"I have a personal story ready to describe", p:"A real moment from your own life that is connected to your big idea. It does not need to be dramatic — just honest and relevant."},
+  {h:"I know my 2–3 supporting points", p:"These are reasons or evidence that prove your idea is true — not separate sub-topics. Each one should directly support your core message."},
+  {h:"I can describe my PowerPoint design choices", p:"Colours, font, image style, amount of text — and WHY each choice matches the mood and tone of your topic."},
+  {h:"I know where I sourced my images", p:"Unsplash, Pexels, Canva, or your own photos. Be ready to name the source AND explain why you chose those specific images."},
+  {h:"I have read all 10 oral defence questions", p:"At least 3 will be asked on exam day. Reading them all now means no surprises — only prepared answers."},
+  {h:"I can speak for ~30 seconds on at least 5 questions", p:"You don't need perfect answers — just enough to respond thoughtfully. Honesty and self-reflection are valued over perfection."},
+  {h:"I am in a quiet place with my notes beside me", p:"A room with no background noise, good microphone access, and your bullet-point planning notes ready to guide you."}
 ];
  
-const clContainer = document.getElementById('checklist-items');
-let checked = new Array(checks.length).fill(false);
- 
+const cl = document.getElementById('checklist-items');
+const checked = new Array(checks.length).fill(false);
 checks.forEach((item, i) => {
   const div = document.createElement('div');
   div.className = 'checklist-item';
-  div.setAttribute('data-index', i);
-  div.innerHTML = `
-    <div class="cb-box" id="cb-${i}"></div>
-    <div class="cb-content">
-      <h4>${item.h}</h4>
-      <p>${item.p}</p>
-    </div>
-  `;
-  div.addEventListener('click', () => toggleCheck(i, div));
-  clContainer.appendChild(div);
+  div.innerHTML = `<div class="cb-box" id="cb-${i}"></div><div class="cb-content"><h4>${item.h}</h4><p>${item.p}</p></div>`;
+  div.addEventListener('click', () => {
+    checked[i] = !checked[i];
+    div.classList.toggle('checked', checked[i]);
+    document.getElementById('cb-'+i).textContent = checked[i] ? '✓' : '';
+    const pct = Math.round(checked.filter(Boolean).length / checks.length * 100);
+    document.getElementById('cl-bar').style.width = pct+'%';
+    document.getElementById('cl-label').textContent = pct+'%';
+    document.getElementById('ready-msg').classList.toggle('show', pct===100);
+  });
+  cl.appendChild(div);
 });
- 
-function toggleCheck(i, el) {
-  checked[i] = !checked[i];
-  el.classList.toggle('checked', checked[i]);
-  document.getElementById('cb-' + i).textContent = checked[i] ? '✓' : '';
-  updateProgress();
-}
- 
-function updateProgress() {
-  const done = checked.filter(Boolean).length;
-  const pct = Math.round((done / checks.length) * 100);
-  document.getElementById('cl-bar').style.width = pct + '%';
-  document.getElementById('cl-label').textContent = pct + '%';
-  document.getElementById('ready-msg').classList.toggle('show', pct === 100);
-}
 </script>
 </body>
 </html>
